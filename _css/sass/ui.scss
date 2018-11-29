@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: silver;
+  ul {
+    li {
+      list-style-type: none;
+      display: inline;
+    }
+  }
+}
+
+.mainButtonDiv {
+padding: 1em;
+font-family: "Segoe UI", sans-serif;
+  .button {
+    color: $japaneseIndigo;
+    padding: 1em;
+    border: 2px $white solid;
+    border-radius: 70px;
+  }
+  .button:hover {
+    background: transparentize($white, 0.5);
+  }
+}
