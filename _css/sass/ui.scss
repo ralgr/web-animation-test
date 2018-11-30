@@ -1,11 +1,36 @@
 a {
   text-decoration: none;
+  color: $white;
+}
+
+a:link {
+  color: $white;
+}
+a:visited {
+  color: $white;
+}
+a:active {
+  color: $deepKoamaru;
+}
+a:hover {
+  transition: all 0.2s ease-in-out;
+  color: $deepKoamaru;
+}
+
+.logo {
+  // //
+  // // width: 15%;
+  // background: $purpleNavy;
+  // // img {
+  // //   max-width: 100%;
+  // // }
 }
 
 nav {
-  background: silver;
   ul {
     li {
+      font-size: 1em;
+      font-weight: bold;
       list-style-type: none;
       display: inline;
     }
@@ -14,14 +39,16 @@ nav {
 
 .mainButtonDiv {
 padding: 1em;
-font-family: "Segoe UI", sans-serif;
   .button {
     color: $japaneseIndigo;
     padding: 1em;
-    border: 2px $white solid;
+    border: 2px $japaneseIndigo solid;
     border-radius: 70px;
   }
   .button:hover {
-    background: transparentize($white, 0.5);
+    transition: all 0.2s ease-in;
+    background: $deepKoamaru;
+    border: 2px $deepKoamaru solid;
+    color: $white;
   }
 }

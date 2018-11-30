@@ -1,7 +1,33 @@
 .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10vh, auto);
   background: $eerieBlack;
 };
 
 footer {
-  background: $fawn;
+  background: $deepKoamaru;
 };
+
+header {
+  .logo {
+    grid-area: logo;
+  }
+  nav {
+    grid-area: nav;
+  }
+  display: grid;
+  grid-template-columns: 10% 20% 60% 10%;
+  grid-template-areas:
+  ". logo nav .";
+}
+
+.homeArticle {
+  background-color: seagreen;
+  .bigWords {
+    background: silver;
+  }
+  .mainButtonDiv {
+    background: royalblue;
+  }
+}

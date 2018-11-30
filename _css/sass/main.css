@@ -339,42 +339,97 @@ template {
 
 a {
   text-decoration: none;
+  color: #fffffc;
 }
 
-nav {
-  background: silver;
+a:link {
+  color: #fffffc;
 }
+
+a:visited {
+  color: #fffffc;
+}
+
+a:active {
+  color: #333074;
+}
+
+a:hover {
+  transition: all 0.2s ease-in-out;
+  color: #333074;
+}
+
 nav ul li {
+  font-size: 1em;
+  font-weight: bold;
   list-style-type: none;
   display: inline;
 }
 
 .mainButtonDiv {
   padding: 1em;
-  font-family: "Segoe UI", sans-serif;
 }
 .mainButtonDiv .button {
   color: #283349;
   padding: 1em;
-  border: 2px #fffffc solid;
+  border: 2px #283349 solid;
   border-radius: 70px;
 }
 .mainButtonDiv .button:hover {
-  background: rgba(255, 255, 252, 0.5);
+  transition: all 0.2s ease-in;
+  background: #333074;
+  border: 2px #333074 solid;
+  color: #fffffc;
 }
 
 .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10vh, auto);
   background: #171617;
 }
 
 footer {
-  background: #dfb66a;
+  background: #333074;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 10% 20% 60% 10%;
+  grid-template-areas: ". logo nav .";
+}
+header .logo {
+  grid-area: logo;
+}
+header nav {
+  grid-area: nav;
+}
+
+.homeArticle {
+  background-color: seagreen;
+}
+.homeArticle .bigWords {
+  background: silver;
+}
+.homeArticle .mainButtonDiv {
+  background: royalblue;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
 }
 
 .bigWords {
-  font-family: "Segoe UI", sans-serif;
+  color: #fffffc;
+}
+.bigWords p {
   font-size: 3em;
-  font-weight: bold;
+}
+.bigWords p .creative {
+  color: #333074;
+}
+.bigWords p .stick {
+  color: #dfb66a;
 }
 
 /*# sourceMappingURL=main.css.map */

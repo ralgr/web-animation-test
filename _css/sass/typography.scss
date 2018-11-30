@@ -1,5 +1,16 @@
-.bigWords {
+body {
   font-family: "Segoe UI", sans-serif;
-  font-size: 3em;
-  font-weight: bold;
+}
+
+.bigWords {
+  color: $white;
+  p {
+    font-size: 3em;
+    .creative {
+      color: $deepKoamaru;
+    }
+    .stick {
+      color: $fawn;
+    }
+  }
 }
