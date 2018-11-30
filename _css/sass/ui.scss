@@ -18,21 +18,18 @@ a:hover {
 }
 
 .logo {
-  // //
-  // // width: 15%;
-  // background: $purpleNavy;
-  // // img {
-  // //   max-width: 100%;
-  // // }
+  width: 20%;
+  img {
+    max-width: 100%;
+  }
 }
 
 nav {
   ul {
     li {
-      font-size: 1em;
+      font-size: 3em;
       font-weight: bold;
       list-style-type: none;
-      display: inline;
     }
   }
 }

@@ -1,33 +1,57 @@
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10vh, auto);
+.grid {;
   background: $eerieBlack;
-};
-
-footer {
-  background: $deepKoamaru;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10vh, auto);
+  grid-template-areas:
+  "header header header"
+  ". main ."
+  "footer footer footer";
 };
 
 header {
-  .logo {
-    grid-area: logo;
-  }
-  nav {
-    grid-area: nav;
-  }
+  grid-area: header;
   display: grid;
   grid-template-columns: 10% 20% 60% 10%;
   grid-template-areas:
   ". logo nav .";
+  .logo {
+    grid-area: logo;
+  }
+  .blackHole {
+    position: absolute;
+    display: block;
+    background: $fawn;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    nav {
+      width: 0%;
+      margin: 20% auto 0 45%;
+      grid-area: nav;
+    }
+  }
 }
 
-.homeArticle {
-  background-color: seagreen;
-  .bigWords {
-    background: silver;
-  }
-  .mainButtonDiv {
-    background: royalblue;
+main {
+  grid-area: main;
+  .homeArticle {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .bigWords {
+      margin: 18% auto 0;
+      width: 13.7%;
+    }
+    .mainButtonDiv {
+      width: 37.55%;
+      margin: 0 auto;
+    }
   }
 }
+
+footer {
+  display: block;
+  grid-area: footer;
+  background: $deepKoamaru;
+};
