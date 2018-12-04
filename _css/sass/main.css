@@ -342,81 +342,97 @@ a {
   color: #fffffc;
 }
 
-a:link {
+header a:link {
   color: #fffffc;
 }
-
-a:visited {
+header a:visited {
   color: #fffffc;
 }
-
-a:active {
+header a:active {
   color: #333074;
 }
-
-a:hover {
+header a:hover {
   transition: all 0.2s ease-in-out;
   color: #333074;
 }
-
-.logo {
-  width: 20%;
-}
-.logo img {
-  max-width: 100%;
-}
-
-nav ul li {
+header nav ul li {
   font-size: 3em;
   font-weight: bold;
   list-style-type: none;
 }
 
-.mainButtonDiv {
+main .mainButtonDiv {
   padding: 1em;
 }
-.mainButtonDiv .button {
+main .mainButtonDiv .button {
   color: #283349;
   padding: 1em;
   border: 2px #283349 solid;
   border-radius: 70px;
 }
-.mainButtonDiv .button:hover {
+main .mainButtonDiv .button:hover {
   transition: all 0.2s ease-in;
   background: #333074;
   border: 2px #333074 solid;
   color: #fffffc;
 }
 
+footer .footerContent .social #fb, footer .footerContent .social #git, footer .footerContent .social #in {
+  fill: #fffffc;
+}
+footer .footerContent .social #fb:hover, footer .footerContent .social #git:hover, footer .footerContent .social #in:hover {
+  transition: all 0.2s ease-in;
+  fill: #374e7a;
+}
+
+body {
+  overflow-y: scroll;
+}
+
 .grid {
   background: #171617;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10vh, auto);
+  grid-template-rows: minmax(10%, auto) minmax(83vh, auto) minmax(10%, auto);
   grid-template-areas: "header header header" ". main ." "footer footer footer";
 }
 
 header {
   grid-area: header;
-  display: grid;
-  grid-template-columns: 10% 20% 60% 10%;
-  grid-template-areas: ". logo nav .";
 }
 header .logo {
-  grid-area: logo;
+  float: left;
+  width: 30vh;
+  height: auto;
+}
+header .logo img {
+  max-width: 100%;
+}
+header .menuContainer {
+  position: fixed;
+  z-index: 1;
+  width: 50px;
+  left: 90%;
+  padding-right: 5%;
+  padding-top: 110px;
+  overflow: hidden;
+}
+header .menuContainer .menuGroup {
+  cursor: pointer;
+  height: 35px;
 }
 header .blackHole {
-  position: absolute;
-  display: block;
+  position: fixed;
+  z-index: 0;
+  display: none;
   background: #dfb66a;
   width: 100%;
-  height: 100vh;
+  height: 0%;
   overflow: hidden;
 }
 header .blackHole nav {
   width: 0%;
   margin: 20% auto 0 45%;
-  grid-area: nav;
 }
 
 main {
@@ -428,18 +444,29 @@ main .homeArticle {
   overflow: hidden;
 }
 main .homeArticle .bigWords {
-  margin: 18% auto 0;
-  width: 13.7%;
+  margin: 18% 15%;
+  width: 100%;
 }
 main .homeArticle .mainButtonDiv {
-  width: 37.55%;
+  width: 100%;
   margin: 0 auto;
 }
 
 footer {
-  display: block;
   grid-area: footer;
   background: #333074;
+}
+footer .footerContent {
+  margin: 5% 15%;
+}
+footer .footerContent .social {
+  padding: 1em;
+  width: 15%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+footer .footerContent a.csFooter:hover {
+  transition: all 0.2s ease-in;
+  color: #374e7a;
 }
 
 body {
@@ -449,14 +476,22 @@ body {
 .bigWords {
   color: #fffffc;
 }
-.bigWords p {
-  font-size: 3em;
+.bigWords h1 {
+  font-size: 64px;
 }
-.bigWords p .creative {
+.bigWords h1 .creative {
   color: #333074;
 }
-.bigWords p .stick {
+.bigWords h1 .stick {
   color: #dfb66a;
+}
+
+.footerContent {
+  color: #fffffc;
+  line-height: 0.3;
+}
+.footerContent .csFooter {
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

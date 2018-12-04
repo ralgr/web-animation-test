@@ -4,8 +4,8 @@ body {
 
 .bigWords {
   color: $white;
-  p {
-    font-size: 3em;
+  h1 {
+    font-size: 64px;
     .creative {
       color: $deepKoamaru;
     }
@@ -13,4 +13,12 @@ body {
       color: $fawn;
     }
   }
+}
+
+.footerContent {
+  color: $white;
+  .csFooter {
+    font-size: 30px;
+  }
+  line-height: 0.3;
 }

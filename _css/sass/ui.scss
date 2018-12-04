@@ -3,49 +3,61 @@ a {
   color: $white;
 }
 
-a:link {
-  color: $white;
-}
-a:visited {
-  color: $white;
-}
-a:active {
-  color: $deepKoamaru;
-}
-a:hover {
-  transition: all 0.2s ease-in-out;
-  color: $deepKoamaru;
-}
-
-.logo {
-  width: 20%;
-  img {
-    max-width: 100%;
+header {
+  a:link {
+    color: $white;
   }
-}
-
-nav {
-  ul {
-    li {
-      font-size: 3em;
-      font-weight: bold;
-      list-style-type: none;
+  a:visited {
+    color: $white;
+  }
+  a:active {
+    color: $deepKoamaru;
+  }
+  a:hover {
+    transition: all 0.2s ease-in-out;
+    color: $deepKoamaru;
+  }
+  nav {
+    ul {
+      li {
+        font-size: 3em;
+        font-weight: bold;
+        list-style-type: none;
+      }
     }
   }
 }
 
-.mainButtonDiv {
-padding: 1em;
-  .button {
-    color: $japaneseIndigo;
-    padding: 1em;
-    border: 2px $japaneseIndigo solid;
-    border-radius: 70px;
+
+main {
+  .mainButtonDiv {
+  padding: 1em;
+    .button {
+      color: $japaneseIndigo;
+      padding: 1em;
+      border: 2px $japaneseIndigo solid;
+      border-radius: 70px;
+    }
+    .button:hover {
+      transition: all 0.2s ease-in;
+      background: $deepKoamaru;
+      border: 2px $deepKoamaru solid;
+      color: $white;
+    }
   }
-  .button:hover {
-    transition: all 0.2s ease-in;
-    background: $deepKoamaru;
-    border: 2px $deepKoamaru solid;
-    color: $white;
+}
+
+footer {
+  .footerContent{
+    .social{
+      #fb, #git, #in {
+        fill: $white;
+      }
+
+      #fb:hover, #git:hover, #in:hover {
+        transition: all 0.2s ease-in;
+        fill: $purpleNavy;
+      }
+    }
   }
 }
