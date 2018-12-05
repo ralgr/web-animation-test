@@ -5,12 +5,12 @@ body {
 .grid {
   background: $eerieBlack;
   display: grid;
-  grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10%, auto);
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10vh, auto) minmax(82.5vh, auto) minmax(10%, auto);
   grid-template-areas:
-  "header header header"
-  ". main ."
-  "footer footer footer";
+  "header"
+  "main"
+  "footer";
 };
 
 .aboutGrid {
@@ -23,7 +23,7 @@ header {
   position: relative;
   width: 100%;
   .logo {
-    margin: auto 15%;
+    margin: auto 5%;
     padding: 3em;
     float: left;
     width: 10vh;
@@ -34,7 +34,7 @@ header {
   }
   .menuContainer {
     opacity: 1;
-    margin: auto 15%;
+    margin: auto 5%;
     position: relative;
     z-index: 1;
     float: right;
@@ -67,7 +67,7 @@ main {
     height: 100%;
     overflow: hidden;
     .heroText {
-      @include bodyMargin(18%);
+      @include bodyMargin(10%);
       width: 100%;
       //background-color: rgba(255, 255, 255, 0.1);
     }

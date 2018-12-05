@@ -393,6 +393,15 @@ footer .footerContent .social #fb:hover, footer .footerContent .social #git:hove
     opacity: 1;
   }
 }
+.menuAppear {
+  display: block;
+  left: 83%;
+}
+
+.menuAnim {
+  animation: fadeIn 0.5s Linear 1;
+}
+
 body {
   overflow-y: scroll;
 }
@@ -400,9 +409,9 @@ body {
 .grid {
   background: #171617;
   display: grid;
-  grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10%, auto);
-  grid-template-areas: "header header header" ". main ." "footer footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10vh, auto) minmax(82.5vh, auto) minmax(10%, auto);
+  grid-template-areas: "header" "main" "footer";
 }
 
 .aboutGrid {
@@ -416,7 +425,7 @@ header {
   width: 100%;
 }
 header .logo {
-  margin: auto 15%;
+  margin: auto 5%;
   padding: 3em;
   float: left;
   width: 10vh;
@@ -427,7 +436,7 @@ header .logo img {
 }
 header .menuContainer {
   opacity: 1;
-  margin: auto 15%;
+  margin: auto 5%;
   position: relative;
   z-index: 1;
   float: right;
@@ -461,7 +470,10 @@ main .homeArticle {
   overflow: hidden;
 }
 main .homeArticle .heroText {
-  margin: 18% 15%;
+  padding-top: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
   width: 100%;
 }
 main .homeArticle .mainButtonDiv {
@@ -504,7 +516,10 @@ body {
 }
 
 main .sectionWords {
-  margin: 5% 15%;
+  padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
   color: #171617;
   width: 25%;
   line-height: 1.5;

@@ -1,5 +1,8 @@
 @mixin bodyMargin($topMargin) {
-  margin: $topMargin 15%;
+  padding-top: $topMargin;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
 }
 
 @mixin bigButtonPad {
