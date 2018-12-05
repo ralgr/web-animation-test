@@ -385,6 +385,14 @@ footer .footerContent .social #fb:hover, footer .footerContent .social #git:hove
   fill: #374e7a;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   overflow-y: scroll;
 }
@@ -393,33 +401,42 @@ body {
   background: #171617;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: minmax(10%, auto) minmax(83vh, auto) minmax(10%, auto);
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(10%, auto);
   grid-template-areas: "header header header" ". main ." "footer footer footer";
+}
+
+.aboutGrid {
+  background: #fffffc;
 }
 
 header {
   grid-area: header;
+  transition: all 0.2 ease-in;
+  position: relative;
+  width: 100%;
 }
 header .logo {
+  margin: auto 15%;
+  padding: 3em;
   float: left;
-  width: 30vh;
+  width: 10vh;
   height: auto;
 }
 header .logo img {
   max-width: 100%;
 }
 header .menuContainer {
-  position: fixed;
+  opacity: 1;
+  margin: auto 15%;
+  position: relative;
   z-index: 1;
-  width: 50px;
-  left: 90%;
+  float: right;
   padding-right: 5%;
   padding-top: 110px;
   overflow: hidden;
 }
 header .menuContainer .menuGroup {
   cursor: pointer;
-  height: 35px;
 }
 header .blackHole {
   position: fixed;
@@ -443,7 +460,7 @@ main .homeArticle {
   height: 100%;
   overflow: hidden;
 }
-main .homeArticle .bigWords {
+main .homeArticle .heroText {
   margin: 18% 15%;
   width: 100%;
 }
@@ -473,17 +490,37 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
-.bigWords {
+.heroText {
   color: #fffffc;
 }
-.bigWords h1 {
+.heroText h1 {
   font-size: 64px;
 }
-.bigWords h1 .creative {
+.heroText h1 .creative {
   color: #333074;
 }
-.bigWords h1 .stick {
+.heroText h1 .stick {
   color: #dfb66a;
+}
+
+main .sectionWords {
+  margin: 5% 15%;
+  color: #171617;
+  width: 25%;
+  line-height: 1.5;
+  background: grey;
+}
+main .floatRight {
+  text-align: right;
+  float: right;
+  background: silver;
+  display: block;
+}
+main .floatLeft {
+  text-align: left;
+  float: left;
+  background: silver;
+  display: block;
 }
 
 .footerContent {

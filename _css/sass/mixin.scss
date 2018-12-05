@@ -1,0 +1,25 @@
+@mixin bodyMargin($topMargin) {
+  margin: $topMargin 15%;
+}
+
+@mixin bigButtonPad {
+  padding: 1em;
+}
+
+@mixin bigButton($color) {
+  color: $color;
+  padding: 1em;
+  border: 2px $color solid;
+  border-radius: 70px;
+}
+
+@mixin bigButtonHover($bgColor, $font) {
+  transition: all 0.2s ease-in;
+  background: $bgColor;
+  border: 2px $bgColor solid;
+  color: $font;
+}
+
+@mixin defaultH1($color) {
+  color: $color;
+}

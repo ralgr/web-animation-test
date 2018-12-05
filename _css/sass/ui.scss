@@ -31,18 +31,12 @@ header {
 
 main {
   .mainButtonDiv {
-  padding: 1em;
+    @include bigButtonPad;
     .button {
-      color: $japaneseIndigo;
-      padding: 1em;
-      border: 2px $japaneseIndigo solid;
-      border-radius: 70px;
+      @include bigButton($japaneseIndigo);
     }
     .button:hover {
-      transition: all 0.2s ease-in;
-      background: $deepKoamaru;
-      border: 2px $deepKoamaru solid;
-      color: $white;
+      @include bigButtonHover($deepKoamaru, $white);
     }
   }
 }
