@@ -6,34 +6,36 @@ body {
   color: $white;
   h1 {
     font-size: 64px;
-    .creative {
-      color: $deepKoamaru;
-    }
-    .stick {
-      color: $fawn;
-    }
   }
+}
+
+.creative {
+  color: $deepKoamaru;
+}
+.stick {
+  color: $fawn;
 }
 
 main {
   .sectionWords {
-    @include bodyMargin(5%);
-    @include defaultH1($eerieBlack);
-    width: 25%;
     line-height: 1.5;
-    background: grey;
   }
   .floatRight {
     text-align: right;
-    float: right;
-    background: silver;
-    display: block;
   }
   .floatLeft {
     text-align: left;
-    float: left;
-    background: silver;
-    display: block;
+  }
+  .inColor {
+    color: $white;
+    line-height: 1.5;
+  }
+  .inWhite {
+    color: $eerieBlack;
+    line-height: 1.5;
+  }
+  .defaultH2 {
+    font-size: 48px;
   }
 }
 

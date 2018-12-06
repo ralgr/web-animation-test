@@ -342,14 +342,14 @@ a {
   color: #fffffc;
 }
 
+header a:active {
+  color: #333074;
+}
 header a:link {
   color: #fffffc;
 }
 header a:visited {
   color: #fffffc;
-}
-header a:active {
-  color: #333074;
 }
 header a:hover {
   transition: all 0.2s ease-in-out;
@@ -376,6 +376,21 @@ main .mainButtonDiv .button:hover {
   border: 2px #333074 solid;
   color: #fffffc;
 }
+main .aboutButtonDiv {
+  padding: 1em;
+}
+main .aboutButtonDiv .aboutButton {
+  color: #374e7a;
+  padding: 1em;
+  border: 2px #374e7a solid;
+  border-radius: 70px;
+}
+main .aboutButtonDiv .aboutButton:hover {
+  transition: all 0.2s ease-in;
+  background: #374e7a;
+  border: 2px #374e7a solid;
+  color: #fffffc;
+}
 
 footer .footerContent .social #fb, footer .footerContent .social #git, footer .footerContent .social #in {
   fill: #fffffc;
@@ -393,17 +408,14 @@ footer .footerContent .social #fb:hover, footer .footerContent .social #git:hove
     opacity: 1;
   }
 }
-.menuAppear {
-  display: block;
-  left: 83%;
-}
-
-.menuAnim {
-  animation: fadeIn 0.5s Linear 1;
+html {
+  overflow: hidden;
 }
 
 body {
-  overflow-y: scroll;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .grid {
@@ -442,7 +454,6 @@ header .menuContainer {
   float: right;
   padding-right: 5%;
   padding-top: 110px;
-  overflow: hidden;
 }
 header .menuContainer .menuGroup {
   cursor: pointer;
@@ -467,18 +478,68 @@ main {
 main .homeArticle {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
-main .homeArticle .heroText {
+main .heroText {
+  box-sizing: border-box;
   padding-top: 10%;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-bottom: 5%;
-  width: 100%;
+  width: 55%;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-main .homeArticle .mainButtonDiv {
+main .mainButtonDiv {
   width: 100%;
   margin: 0 auto;
+}
+main .sectionBg {
+  width: 100%;
+  min-height: 100%;
+  background: seagreen;
+  box-sizing: border-box;
+  padding-top: 1%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+}
+main .sectionWords {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 63.7vh;
+  background: silver;
+}
+main .floatLeft {
+  float: left;
+  display: block;
+}
+main .floatRight {
+  float: right;
+  display: block;
+}
+main .homeArticleGrid {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(83vh, auto));
+}
+main .bgColor {
+  background: #374e7a;
+}
+main .imageContainer {
+  background: red;
+}
+main .sectionContentLeft {
+  box-sizing: border-box;
+  background: royalblue;
+  width: 50%;
+  float: left;
+  padding-right: 5%;
+}
+main .sectionContentRight {
+  background: royalblue;
+  width: 50%;
+  float: right;
+  padding-left: 5%;
+  text-align: right;
 }
 
 footer {
@@ -508,34 +569,34 @@ body {
 .heroText h1 {
   font-size: 64px;
 }
-.heroText h1 .creative {
+
+.creative {
   color: #333074;
 }
-.heroText h1 .stick {
+
+.stick {
   color: #dfb66a;
 }
 
 main .sectionWords {
-  padding-top: 5%;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 5%;
-  color: #171617;
-  width: 25%;
   line-height: 1.5;
-  background: grey;
 }
 main .floatRight {
   text-align: right;
-  float: right;
-  background: silver;
-  display: block;
 }
 main .floatLeft {
   text-align: left;
-  float: left;
-  background: silver;
-  display: block;
+}
+main .inColor {
+  color: #fffffc;
+  line-height: 1.5;
+}
+main .inWhite {
+  color: #171617;
+  line-height: 1.5;
+}
+main .defaultH2 {
+  font-size: 48px;
 }
 
 .footerContent {

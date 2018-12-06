@@ -4,14 +4,14 @@ a {
 }
 
 header {
+  a:active {
+    color: $deepKoamaru;
+  }
   a:link {
     color: $white;
   }
   a:visited {
     color: $white;
-  }
-  a:active {
-    color: $deepKoamaru;
   }
   a:hover {
     transition: all 0.2s ease-in-out;
@@ -31,12 +31,21 @@ header {
 
 main {
   .mainButtonDiv {
-    @include bigButtonPad;
+    @include bigButtonDivPad;
     .button {
       @include bigButton($japaneseIndigo);
     }
     .button:hover {
       @include bigButtonHover($deepKoamaru, $white);
+    }
+  }
+  .aboutButtonDiv {
+    @include bigButtonDivPad;
+    .aboutButton {
+      @include bigButton($purpleNavy);
+    }
+    .aboutButton:hover {
+      @include bigButtonHover($purpleNavy, $white);
     }
   }
 }
