@@ -1,13 +1,18 @@
+//Hides the scroll bar for the HTML.
 html {
   overflow: hidden;
 }
 
+//Apply the vertical scrollbar for the body.
+//Height needed to work.
 body {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
+//Wrapper for content.
+//Technology used: css3 grid.
 .grid {
   background: $eerieBlack;
   display: grid;
@@ -19,10 +24,12 @@ body {
   "footer";
 };
 
+//Grid for about.html.
 .aboutGrid {
   background: $white;
 }
 
+//General classes for the header.
 header {
   grid-area: header;
   transition: all 0.2 ease-in;
@@ -65,13 +72,13 @@ header {
   }
 }
 
+//General classes for the main content.
 main {
   grid-area: main;
   //==[INDEX CLASSES]==
   .homeArticle {
     width: 100%;
     height: 100%;
-    // overflow: hidden;
   }
   .heroText {
     box-sizing: border-box;
@@ -134,6 +141,7 @@ main {
   }
 }
 
+//General classes for the footer.
 footer {
   grid-area: footer;
   background: $deepKoamaru;
