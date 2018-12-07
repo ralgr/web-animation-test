@@ -7,3 +7,18 @@
   0% {transform: scaleY(0);}
   100% {transform: scaleY(1);}
 }
+
+@keyframes snapLeft {
+  from {left: 10%;}
+  to {left: 0%;}
+}
+
+@keyframes snapRight {
+  from {right: 10%;}
+  to {right: 0%;}
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}

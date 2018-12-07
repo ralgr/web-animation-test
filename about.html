@@ -35,6 +35,7 @@
               <li><a href="index.html">home</a></li>
               <li><a href="about.html">about</a></li>
               <li><a href="contact.html">contact</a></li>
+              <li><a href="gallery.html">gallery</a></li>
             </ul>
           </nav>
           <div class="stickSolo">
@@ -46,42 +47,148 @@
 
     <main role="main">
       <article class="homeArticle homeArticleGrid">
+        <!-- ==[SECTION1]== -->
         <section>
           <div class="sectionBg">
-            <div class="sectionWords floatLeft inWhite">
+            <!-- ==[row1]== -->
+            <div class="sectionWords floatLeft inWhite row1">
               <div class="sectionContentLeft">
                 <h1>
                   <strong>
                     About.
                   </strong><br>
                 </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sit tenetur neque! Aliquam cupiditate, autem ab sunt id ducimus enim temporibus. Recusandae fuga beatae distinctio cum, magni quasi ipsa porro. Praesentium neque impedit repellendus veniam, quae optio earum reiciendis voluptatum cupiditate voluptas, nulla error maiores animi at debitis, sit nesciunt. Eligendi perferendis, illo incidunt suscipit voluptatem rem sunt, cum facere?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Vitae sit tenetur neque! Aliquam cupiditate, autem ab sunt id ducimus enim temporibus.
+                  Recusandae fuga beatae distinctio cum, magni quasi ipsa porro. Praesentium neque impedit
+                  repellendus veniam, quae optio earum reiciendis voluptatum cupiditate voluptas, nulla
+                  error maiores animi at debitis, sit nesciunt. Eligendi perferendis, illo incidunt
+                  suscipit voluptatem rem sunt, cum facere?</p>
+              </div>
+              <div class="sectionContentRight">
+                <div class="artCont">
+                  <div class="colors">
+                    <div class="fawn"></div>
+                    <div class="purpleNavy"></div>
+                    <div class="deepKoamaru"></div>
+                    <div class="japaneseIndigo"></div>
+                  </div>
+                </div>
               </div>
             </div>
-        </section>
-        <section>
-          <div class="sectionBg bgColor">
-            <div class="sectionWords floatRight inColor">
-              <h1>
-                <strong>
-                  The team.
-                </strong><br>
-              </h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sit tenetur neque! Aliquam cupiditate, autem ab sunt id ducimus enim temporibus. Recusandae fuga beatae distinctio cum, magni quasi ipsa porro. Praesentium neque impedit repellendus veniam, quae optio earum reiciendis voluptatum cupiditate voluptas, nulla error maiores animi at debitis, sit nesciunt. Eligendi perferendis, illo incidunt suscipit voluptatem rem sunt, cum facere?</p>
+
+            <!-- ==[row2]== -->
+            <div class="sectionWords floatLeft inWhite row2">
+                <div class="sectionContentRight">
+                  <h1>
+                    <strong>
+                      Lorem.
+                    </strong><br>
+                  </h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cumque, laborum dolore, neque placeat expedita mollitia nemo.
+                    Hic ad, error iusto qui veritatis voluptatum provident magni
+                    explicabo est molestiae culpa tenetur harum quibusdam soluta
+                    repellendus reiciendis ea modi incidunt. Dignissimos iusto,
+                    maiores cum atque facere doloribus natus. Impedit aspernatur,
+                    saepe. Odit odio aspernatur rerum maiores sequi, voluptatibus
+                    explicabo repellat quibusdam commodi!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Assumenda fugit autem natus fugiat reprehenderit dolorum
+                    tempore ea. Debitis incidunt delectus, minus cumque necessitatibus
+                    soluta, iste accusamus rem adipisci ea itaque blanditiis corrupti
+                    accusantium culpa nesciunt error aspernatur molestiae ipsam alias.</p>
+                </div>
+                <div class="sectionContentLeft">
+                  <div class="artCont">
+                    <img src="_img/Untitled-5.svg" alt="An unfinished logo.">
+                  </div>
+                </div>
+              </div>
+
+            <!-- ==[row3]== -->
+            <div class="sectionWords floatLeft inWhite row3">
+                <div class="sectionContentLeft">
+                  <h1>
+                    <strong>
+                      Ipsum.
+                    </strong><br>
+                  </h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sit tenetur neque!
+                    Aliquam cupiditate, autem ab sunt id ducimus enim temporibus. Recusandae fuga beatae
+                    distinctio cum, magni quasi ipsa porro. Praesentium neque impedit repellendus veniam,
+                    quae optio earum reiciendis voluptatum cupiditate voluptas, nulla error maiores animi
+                    at debitis, sit nesciunt. Eligendi perferendis, illo incidunt suscipit voluptatem rem
+                    sunt, cum facere?</p>
+                </div>
+                <div class="sectionContentRight">
+                  <div class="artCont">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox= "0 0 500 150">
+                      <!-- ==[SHADOWS]== -->
+                      <line class="barOneShadow" x1="0" y1="30" x2="490" y2="30">
+                        <animate id="blastB1" attributeName="x2" from="490" to="500" dur="0.8s" begin = "0.1s; collapseB1.end"/>
+                        <animate id="collapseB1" attributeName="x2" from="500" to="490" dur="0.8s" begin = "blastB1.end"/>
+                      </line>
+                      <line class="barTwoShadow" x1="0" y1="85" x2="450" y2="85">
+                        <animate id="blastB2" attributeName="x2" from="450" to="460" dur="0.8s" begin = "blastB1.end"/>
+                        <animate id="collapseB2" attributeName="x2" from="460" to="450" dur="0.8s" begin = "blastB2.end"/>
+                      </line>
+                      <line class="barThreeShadow" x1="0" y1="140" x2="400" y2="140">
+                        <animate id="blastB3" attributeName="x2" from="400" to="410" dur="0.8s" begin = "0.1s; collapseB3.end"/>
+                        <animate id="collapseB3" attributeName="x2" from="410" to="400" dur="0.8s" begin = "blastB3.end"/>
+                      </line>
+
+                      <!-- ==[BARS]== -->
+                      <line class="barOne" x1="0" y1="20" x2="495" y2="20"></line>
+                      <line class="barTwo" x1="0" y1="75" x2="455" y2="75"></line>
+                      <line class="barThree" x1="0" y1="130" x2="405" y2="130"></line>
+                  </div>
+                </div>
             </div>
           </div>
         </section>
+        <!-- ==[SECTION2]== -->
+        <section>
+          <div class="sectionBg bgColor">
+            <div class="sectionWords floatRight inColor">
+              <div class="sectionContentLeft">
+                <h1>
+                  <strong>
+                    The team.
+                  </strong><br>
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sit tenetur neque! Aliquam cupiditate, autem ab sunt id ducimus enim temporibus. Recusandae fuga beatae distinctio cum, magni quasi ipsa porro. Praesentium neque impedit repellendus veniam, quae optio earum reiciendis voluptatum cupiditate voluptas, nulla error maiores animi at debitis, sit nesciunt. Eligendi perferendis, illo incidunt suscipit voluptatem rem sunt, cum facere?</p>
+              </div>
+              <div class="sectionContentLeft">
+                <h1>
+                  <strong>
+                    Your code monkeys are.
+                  </strong><br>
+                </h1>
+                <div class="profImg">
+                  <img src="_img/creativeStickIconBlk.svg" alt="" class="scr">
+                  <h3>
+                      Stick&nbspMcStickface
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ==[SECTION3]== -->
         <section>
           <div class="sectionBg">
             <div class="sectionWords floatLeft inWhite">
-              <h1>
-                <strong>
-                The legend.
-                </strong><br>
-              </h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sit tenetur neque! Aliquam cupiditate, autem ab sunt id ducimus enim temporibus. Recusandae fuga beatae distinctio cum, magni quasi ipsa porro. Praesentium neque impedit repellendus veniam, quae optio earum reiciendis voluptatum cupiditate voluptas, nulla error maiores animi at debitis, sit nesciunt. Eligendi perferendis, illo incidunt suscipit voluptatem rem sunt, cum facere?</p>
-              <div class="aboutButtonDiv">
-                  <a class="aboutButton" href="about.html"><strong>Contact the stick.</strong></a>
+              <div class="sectionContentLeft">
+                <h1>
+                  <strong>
+                  The legend.
+                  </strong><br>
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sit tenetur neque! Aliquam cupiditate, autem ab sunt id ducimus enim temporibus. Recusandae fuga beatae distinctio cum, magni quasi ipsa porro. Praesentium neque impedit repellendus veniam, quae optio earum reiciendis voluptatum cupiditate voluptas, nulla error maiores animi at debitis, sit nesciunt. Eligendi perferendis, illo incidunt suscipit voluptatem rem sunt, cum facere?</p>
+                <div class="aboutButtonDiv">
+                    <a class="aboutButton" href="contact.html"><strong>Contact the stick.</strong></a>
+                </div>
               </div>
             </div>
           </div>

@@ -416,15 +416,30 @@ footer .footerContent .social #fb:hover, footer .footerContent .social #git:hove
     transform: scaleY(1);
   }
 }
-.animation {
-  left: 82.4vw;
-  animation: fadeIn 0.4s linear infinite;
+@keyframes snapLeft {
+  from {
+    left: 10%;
+  }
+  to {
+    left: 0%;
+  }
 }
-
-.delay {
-  animation: fadeIn 0.2s linear 1;
+@keyframes snapRight {
+  from {
+    right: 10%;
+  }
+  to {
+    right: 0%;
+  }
 }
-
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 html {
   overflow: hidden;
 }
@@ -436,17 +451,49 @@ body {
 }
 
 .grid {
-  background: #171617;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(15vh, auto) minmax(85vh, auto) minmax(10vh, auto);
   grid-template-areas: "header" "main" "footer";
 }
 
-.indexBg {
+.adolAbBg {
+  background-image: url("../../../_img/adolescence-attractive-beautiful-573299.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aaaBg {
   background-image: url("../../../_img/adult-african-art-1038040.jpg");
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.adultAbBg {
+  background-image: url("../../../_img/adult-attractive-beautiful-1645822.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.attractAbBg {
+  background-image: url("../../../_img/attractive-beautiful-casual-1082962.jpg");
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stickBd {
+  background-image: url("../../../_img/stickBackdropBW.svg");
+  background-attachment: fixed;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -455,11 +502,19 @@ body {
   background: #fffffc;
 }
 
+.indexGrid {
+  background: #171617;
+}
+
+.deepGrid {
+  background: #333074;
+}
+
 header {
   grid-area: header;
   transition: all 0.2 ease-in;
   position: fixed;
-  width: 100%;
+  width: 99.37%;
 }
 header .logo {
   margin: auto 5%;
@@ -474,7 +529,7 @@ header .logo img {
 header .menuContainer {
   margin: auto 5%;
   position: relative;
-  z-index: 1;
+  z-index: 5;
   float: right;
   padding-right: 5%;
   padding-top: 110px;
@@ -485,7 +540,7 @@ header .menuContainer .menuGroup {
 header .blackHole {
   animation: fadeIn 0.3s linear 1;
   position: fixed;
-  z-index: 0;
+  z-index: 4;
   display: none;
   background: rgba(51, 48, 116, 0.3);
   width: 100%;
@@ -499,9 +554,12 @@ header .blackHole nav {
   padding-right: 45%;
   padding-bottom: 0%;
   position: absolute;
+  z-index: 2;
   opacity: 0;
 }
 header .blackHole .stickSolo {
+  position: relative;
+  z-index: 1;
   animation: grow 0.5s linear 1;
   transform-origin: bottom;
   padding-top: 15%;
@@ -524,6 +582,7 @@ main .homeArticle {
 }
 main .heroText {
   box-sizing: border-box;
+  animation: fadeIn 0.5s linear 1;
   padding-top: 10%;
   padding-left: 20%;
   padding-right: 20%;
@@ -538,18 +597,22 @@ main .mainButtonDiv {
 main .sectionBg {
   width: 100%;
   min-height: 100%;
-  background: seagreen;
   box-sizing: border-box;
-  padding-top: 1%;
+  padding-top: 5%;
   padding-left: 20%;
   padding-right: 20%;
   padding-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(10vh, auto) minmax(10vh, auto) minmax(10vh, auto);
 }
 main .sectionWords {
   box-sizing: border-box;
   width: 100%;
-  min-height: 63.7vh;
-  background: silver;
+}
+main .homeArticleGrid {
+  display: grid;
+  grid-template-rows: minmax(105vh, auto) minmax(50vh, auto) 45vh;
 }
 main .floatLeft {
   float: left;
@@ -559,29 +622,140 @@ main .floatRight {
   float: right;
   display: block;
 }
-main .homeArticleGrid {
-  display: grid;
-  grid-template-rows: repeat(3, minmax(83vh, auto));
+main .sectionContentLeft {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-top: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 6%;
+}
+main .sectionContentRight {
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding-top: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 6%;
+}
+main .artCont {
+  box-sizing: border-box;
+  border-radius: 30px;
+  background: #171617;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+main .artCont svg {
+  width: 500px;
+  height: 100%;
+}
+main .artCont .barOne {
+  stroke: #dfb66a;
+  stroke-width: 20;
+}
+main .artCont .barTwo {
+  stroke: #333074;
+  stroke-width: 20;
+}
+main .artCont .barThree {
+  stroke: #333074;
+  stroke-width: 20;
+}
+main .artCont .barOneShadow {
+  opacity: 0.8;
+  stroke: #fffffc;
+  stroke-width: 20;
+}
+main .artCont .barTwoShadow {
+  opacity: 0.8;
+  stroke: #fffffc;
+  stroke-width: 20;
+}
+main .artCont .barThreeShadow {
+  opacity: 0.8;
+  stroke: #fffffc;
+  stroke-width: 20;
 }
 main .bgColor {
   background: #374e7a;
 }
-main .imageContainer {
-  background: red;
-}
-main .sectionContentLeft {
+main .colors {
+  width: 95%;
+  height: 10vh;
+  margin: 0 auto;
   box-sizing: border-box;
-  background: royalblue;
-  width: 50%;
-  float: left;
-  padding-right: 5%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
 }
-main .sectionContentRight {
-  background: royalblue;
-  width: 50%;
-  float: right;
-  padding-left: 5%;
-  text-align: right;
+main .fawn, main .deepKoamaru, main .japaneseIndigo, main .purpleNavy {
+  box-sizing: border-box;
+  width: 24%;
+  height: 100%;
+  display: inline-block;
+}
+main .fawn {
+  background: #dfb66a;
+}
+main .deepKoamaru {
+  background: #333074;
+}
+main .japaneseIndigo {
+  background: #283349;
+}
+main .purpleNavy {
+  background: #374e7a;
+}
+main .row1 {
+  display: none;
+}
+main .row2 {
+  display: none;
+}
+main .row3 {
+  display: none;
+}
+main .fade {
+  animation: fadeIn 0.5s linear 1;
+}
+main .profImg {
+  width: 25%;
+  height: 25%;
+  text-align: center;
+}
+main .profImg img {
+  max-width: 100%;
+}
+main .galleryArt {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 85vh;
+}
+main .section1 {
+  display: none;
+}
+main .section2 {
+  display: none;
+}
+main .section3 {
+  display: none;
+}
+main .section4 {
+  display: none;
+}
+main .section5 {
+  display: none;
+}
+main .section6 {
+  display: none;
+}
+main .section7 {
+  display: none;
 }
 
 footer {
@@ -624,7 +798,7 @@ main .sectionWords {
   line-height: 1.5;
 }
 main .floatRight {
-  text-align: right;
+  text-align: left;
 }
 main .floatLeft {
   text-align: left;

@@ -14,7 +14,7 @@ body {
 //Wrapper for content.
 //Technology used: css3 grid.
 .grid {
-  background: $eerieBlack;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(15vh, auto) minmax(85vh, auto) minmax(10vh, auto);
@@ -24,25 +24,62 @@ body {
   "footer";
 };
 
-.indexBg {
+//Background class.
+.adolAbBg {
+    background-image: url('../../../_img/adolescence-attractive-beautiful-573299.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aaaBg {
     background-image: url('../../../_img/adult-african-art-1038040.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.adultAbBg {
+    background-image: url('../../../_img/adult-attractive-beautiful-1645822.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.attractAbBg {
+    background-image: url('../../../_img/attractive-beautiful-casual-1082962.jpg');
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-//Grid for about.html.
+.stickBd {
+    background-image: url('../../../_img/stickBackdropBW.svg');
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//Grid colours.
 .aboutGrid {
   background: $white;
 }
+.indexGrid {
+  background: $eerieBlack;
+}
+.deepGrid {
+  background: $deepKoamaru;
+}
+
 
 //General classes for the header.
 header {
   grid-area: header;
   transition: all 0.2 ease-in;
   position: fixed;
-  width: 100%;
+  width: 99.37%;
   .logo {
     margin: auto 5%;
     padding: 3em;
@@ -56,7 +93,7 @@ header {
   .menuContainer {
     margin: auto 5%;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     float: right;
     padding-right: 5%;
     padding-top: 110px;
@@ -67,7 +104,7 @@ header {
   .blackHole {
     animation: fadeIn 0.3s linear 1;
     position: fixed;
-    z-index: 0;
+    z-index: 4;
     display: none;
     background: transparentize($deepKoamaru, 0.7);
     width: 100%;
@@ -77,9 +114,12 @@ header {
       width: 100%;
       @include bodyPadding(20%, 45%, 45%, 0%);
       position: absolute;
+      z-index: 2;
       opacity: 0;
     }
     .stickSolo {
+      position: relative;
+      z-index: 1;
       animation: grow 0.5s linear 1;
       transform-origin: bottom;
       @include bodyPadding(15%, 0%, 10%, 0%);
@@ -102,6 +142,7 @@ main {
   }
   .heroText {
     box-sizing: border-box;
+    animation: fadeIn 0.5s linear 1;
     @include bodyMargin(10%);
     width: 55%;
     float: left;
@@ -112,20 +153,26 @@ main {
     margin: 0 auto;
     //background-color: rgba(0, 255, 255, 0.1);
   }
+
+  //==[ABOUT CLASSES]==
   .sectionBg {
     width: 100%;
     min-height: 100%;
-    background: seagreen;
     box-sizing: border-box;
-    @include bodyMargin(1%);
+    @include bodyMargin(5%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(10vh, auto) minmax(10vh, auto) minmax(10vh, auto);
   }
-
-  //==[ABOUT CLASSES]==
   .sectionWords {
     box-sizing: border-box;
     width: 100%;
-    min-height: 63.7vh;
-    background: silver;
+
+  }
+  //Arranging content.
+  .homeArticleGrid {
+    display: grid;
+    grid-template-rows: minmax(105vh, auto) minmax(50vh, auto) 45vh;
   }
   .floatLeft {
     float: left;
@@ -135,29 +182,134 @@ main {
     float: right;
     display: block;
   }
-  .homeArticleGrid {
-    display: grid;
-    grid-template-rows: repeat(3, minmax(83vh, auto));
+  .sectionContentLeft {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    @include bodyPadding(0%, 5%, 5%, 6%);
   }
+  .sectionContentRight {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    @include bodyPadding(0%, 5%, 5%, 6%);
+  }
+  //Art content classes.
+  .artCont {
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: $eerieBlack;
+    @include bodyPadding(5%, 5%, 5%, 5%);
+    svg {
+      width: 500px;
+      height: 100%;
+    }
+    .barOne {
+      stroke: $fawn;
+      stroke-width: 20;
+    }
+    .barTwo {
+      stroke: $deepKoamaru;
+      stroke-width: 20;
+    }
+    .barThree {
+      stroke: $deepKoamaru;
+      stroke-width: 20;
+    }
+    .barOneShadow {
+      opacity: 0.8;
+      stroke: $white;
+      stroke-width: 20;
+    }
+    .barTwoShadow {
+      opacity: 0.8;
+      stroke: $white;
+      stroke-width: 20;
+    }
+    .barThreeShadow {
+      opacity: 0.8;
+      stroke: $white;
+      stroke-width: 20;
+    }
+  }
+  //Decoration classes.
   .bgColor {
     background: $purpleNavy;
   }
-  .imageContainer {
-    background: red;
-  }
-  .sectionContentLeft {
+  .colors {
+    width: 95%;
+    height: 10vh;
+    margin: 0 auto;
     box-sizing: border-box;
-    background: royalblue;
-    width: 50%;
-    float: left;
-    padding-right: 5%;
+    @include bodyPadding(1% , 1% , 1% , 1% );
   }
-  .sectionContentRight {
-    background: royalblue;
-    width: 50%;
-    float: right;
-    padding-left: 5%;
-    text-align: right;
+  .fawn, .deepKoamaru, .japaneseIndigo, .purpleNavy {
+    box-sizing: border-box;
+    width: 24%;
+    height: 100%;
+    display: inline-block;
+  }
+  .fawn {
+    background: $fawn;
+  }
+  .deepKoamaru {
+    background: $deepKoamaru;
+  }
+  .japaneseIndigo {
+    background: $japaneseIndigo;
+  }
+  .purpleNavy {
+    background: $purpleNavy;
+  }
+  .row1 {
+    display: none;
+  }
+  .row2 {
+    display: none;
+  }
+  .row3 {
+    display: none;
+  }
+  .fade {
+    animation: fadeIn 0.5s linear 1;
+  }
+
+  //Section2 decoration classes.
+  .profImg {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  //==[GALLERY CLASSES]==.
+  .galleryArt {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 85vh
+  }
+  .section1 {
+    display: none;
+  }
+  .section2 {
+    display: none;
+  }
+  .section3 {
+    display: none;
+  }
+  .section4 {
+    display: none;
+  }
+  .section5 {
+    display: none;
+  }
+  .section6 {
+    display: none;
+  }
+  .section7 {
+    display: none;
   }
 }
 
