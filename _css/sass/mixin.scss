@@ -5,6 +5,14 @@
   padding-bottom: 5%;
 }
 
+@mixin bodyPadding($topPad, $leftPad, $rightPad, $botPad) {
+  padding-top: $topPad;
+  padding-left: $leftPad;
+  padding-right: $rightPad;
+  padding-bottom: $botPad;
+}
+
+
 @mixin bigButtonDivPad {
   padding: 1em;
 }

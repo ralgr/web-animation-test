@@ -17,12 +17,20 @@ body {
   background: $eerieBlack;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(10vh, auto) minmax(82.5vh, auto) minmax(10%, auto);
+  grid-template-rows: minmax(15vh, auto) minmax(85vh, auto) minmax(10vh, auto);
   grid-template-areas:
   "header"
   "main"
   "footer";
 };
+
+.indexBg {
+    background-image: url('../../../_img/adult-african-art-1038040.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 //Grid for about.html.
 .aboutGrid {
@@ -33,7 +41,7 @@ body {
 header {
   grid-area: header;
   transition: all 0.2 ease-in;
-  position: relative;
+  position: fixed;
   width: 100%;
   .logo {
     margin: auto 5%;
@@ -46,7 +54,6 @@ header {
     }
   }
   .menuContainer {
-    opacity: 1;
     margin: auto 5%;
     position: relative;
     z-index: 1;
@@ -58,16 +65,29 @@ header {
     }
   }
   .blackHole {
+    animation: fadeIn 0.3s linear 1;
     position: fixed;
     z-index: 0;
     display: none;
-    background: $fawn;
+    background: transparentize($deepKoamaru, 0.7);
     width: 100%;
-    height: 0%;
+    height: 100%;
     overflow: hidden;
     nav {
-      width: 0%;
-      margin: 20% auto 0 45%;
+      width: 100%;
+      @include bodyPadding(20%, 45%, 45%, 0%);
+      position: absolute;
+      opacity: 0;
+    }
+    .stickSolo {
+      animation: grow 0.5s linear 1;
+      transform-origin: bottom;
+      @include bodyPadding(15%, 0%, 10%, 0%);
+      width: 50%;
+      float: right;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -85,7 +105,7 @@ main {
     @include bodyMargin(10%);
     width: 55%;
     float: left;
-    background-color: rgba(255, 255, 255, 0.1);
+    // background-color: rgba(255, 255, 255, 0.1);
   }
   .mainButtonDiv {
     width: 100%;

@@ -408,6 +408,23 @@ footer .footerContent .social #fb:hover, footer .footerContent .social #git:hove
     opacity: 1;
   }
 }
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animation {
+  left: 82.4vw;
+  animation: fadeIn 0.4s linear infinite;
+}
+
+.delay {
+  animation: fadeIn 0.2s linear 1;
+}
+
 html {
   overflow: hidden;
 }
@@ -422,8 +439,16 @@ body {
   background: #171617;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(10vh, auto) minmax(82.5vh, auto) minmax(10%, auto);
+  grid-template-rows: minmax(15vh, auto) minmax(85vh, auto) minmax(10vh, auto);
   grid-template-areas: "header" "main" "footer";
+}
+
+.indexBg {
+  background-image: url("../../../_img/adult-african-art-1038040.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .aboutGrid {
@@ -433,7 +458,7 @@ body {
 header {
   grid-area: header;
   transition: all 0.2 ease-in;
-  position: relative;
+  position: fixed;
   width: 100%;
 }
 header .logo {
@@ -447,7 +472,6 @@ header .logo img {
   max-width: 100%;
 }
 header .menuContainer {
-  opacity: 1;
   margin: auto 5%;
   position: relative;
   z-index: 1;
@@ -459,17 +483,36 @@ header .menuContainer .menuGroup {
   cursor: pointer;
 }
 header .blackHole {
+  animation: fadeIn 0.3s linear 1;
   position: fixed;
   z-index: 0;
   display: none;
-  background: #dfb66a;
+  background: rgba(51, 48, 116, 0.3);
   width: 100%;
-  height: 0%;
+  height: 100%;
   overflow: hidden;
 }
 header .blackHole nav {
-  width: 0%;
-  margin: 20% auto 0 45%;
+  width: 100%;
+  padding-top: 20%;
+  padding-left: 45%;
+  padding-right: 45%;
+  padding-bottom: 0%;
+  position: absolute;
+  opacity: 0;
+}
+header .blackHole .stickSolo {
+  animation: grow 0.5s linear 1;
+  transform-origin: bottom;
+  padding-top: 15%;
+  padding-left: 0%;
+  padding-right: 10%;
+  padding-bottom: 0%;
+  width: 50%;
+  float: right;
+}
+header .blackHole .stickSolo img {
+  max-width: 100%;
 }
 
 main {
@@ -487,7 +530,6 @@ main .heroText {
   padding-bottom: 5%;
   width: 55%;
   float: left;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 main .mainButtonDiv {
   width: 100%;
